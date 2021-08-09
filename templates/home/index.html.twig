@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        <div class="content">
+            <img src="{{ asset('images/accueil.png') }}" alt="">
+
+        
+
+        <h3 class = "display-3"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> Minitère de l'Education Nationale et de l'Alphabétisation (MENA) </font> </font> </h3>
+        <p class = "lead"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> Intégration des agents contractuels. </font> </font> </p>
+        <hr class = "my-4">
+    </div>
+        <p> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> Veuillez vous connecter.  </font> </font> </p>
+        <p class = "lead">
+            <a class="btn btn-primary btn-lg" href="{{ path('app_login') }}" role="button"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;">> Connexion </font> </font> </a>
+        </p>
+        
+
+    {% endblock %}

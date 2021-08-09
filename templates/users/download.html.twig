@@ -1,0 +1,49 @@
+{% extends "base-pdf.html.twig" %}
+
+{% block title %}Liste des données de {{app.user.matricule}} {% endblock %}
+{% block body %}
+    <h1>Liste des données de {{app.user.matricule}} </h1>
+    <h2>Vos données</h2>
+    <table border=1>
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ app.user.matricule }}</td>
+                <td>{{ app.user.nom }}</td>
+                <td>{{ app.user.prenom }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Vos informations professionnelles</h2>
+    <table border=1>
+        <thead>
+            <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Contenu</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>{{ app.user.matricule }}</td>
+                    <td>{{ app.user.matricule }}</td>
+                        
+                </tr>
+              
+                   
+    
+        </tbody>
+    </table>
+
+    <h2>Vos images</h2>
+    
+        
+        
+
+{% endblock %}

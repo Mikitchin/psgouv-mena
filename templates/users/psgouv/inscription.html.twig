@@ -1,0 +1,33 @@
+{% extends 'users.html.twig' %}
+
+{% block title %}formulaire!{% endblock %}
+{%  form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+
+
+<h1>VEUILLEZ REMPLIR LE FORMULAIRE</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.matricule) }}
+        {{ form_row(form.nom, {'label': 'Nom ', 'attr': {'placeholder': "Entrer votre nom" }}) }}
+        {{ form_row(form.prenom, {'label': 'Prenom ', 'attr': {'placeholder': "Entrer votre Prénom" }}) }}
+        {{ form_row(form.email, {'label': 'Email ', 'attr': {'placeholder': "Entrer votre email" }}) }}
+        {{ form_row(form.dateNaissance, {'label': 'Date de naissance'}) }}
+        {{ form_row(form.lieuNaisssance, {'label': 'Lieu de Naissance ', 'attr': {'placeholder': "Entrer votre lieu de naissance" }}) }}
+        {{ form_row(form.genre) }}
+        {{ form_row(form.situationMatrimoniale) }}
+               
+        {{ form_row(form.emploi) }}
+        {{ form_row(form.discipline) }}
+        {{ form_row(form.drena) }}
+        {{ form_row(form.structure) }}
+        {{ form_row(form.nomPere, {'label': 'Nom du père', 'attr': {'placeholder': "Entrer le nom de votre père" }}) }}
+        {{ form_row(form.prenomPere, {'label': 'Prénom du père ', 'attr': {'placeholder': "Prénom du père" }}) }}
+        {{ form_row(form.nomMere, {'label': 'Nom de la mère', 'attr': {'placeholder': "Entrer le nom de votre mère" }}) }}
+        {{ form_row(form.prenomMere, {'label': 'Prénom de la mère', 'attr': {'placeholder': "Prénom de votre mère" }}) }}
+        {{ form_row(form.diplome, {'label': 'Diplôme', 'attr': {'placeholder': "Diplôme" }}) }}
+        {{ form_row(form.contact, {'label': 'Téléphone ', 'attr': {'placeholder': "Entrer votre numéro de téléphone" }}) }}
+       
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+    {{ form_end(form) }}
+{% endblock %}

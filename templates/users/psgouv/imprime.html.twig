@@ -1,0 +1,56 @@
+{% extends 'users.html.twig' %}
+
+{% block title %}Imprime fiche{{ app.user.nom }}  {% endblock %}
+
+{% block body %}
+	<div class="grix xs4 container">
+
+        {% for message in app.flashes('message') %}
+			<div class="col-xs4">
+				<div class="p-3 my-2 rounded-2 success">{{message}}</div>
+			</div>
+		{% endfor %}
+		
+        <div class="col-xs4">
+    <h1>Formulaire renseigné avec succès ! </h1>
+</div>
+
+<div class="col-xs1">Matricule :</div>
+<div class="col-xs3"> {{ app.user.matricule }} </div>
+
+<div class="col-xs1">Nom :</div>
+<div class="col-xs3">{{ app.user.nom }}</div>
+<div class="col-xs1">Prénom :</div>
+<div class="col-xs3">{{ app.user.prenom }}</div>
+
+<div class="col-xs1">Date de naissance :</div>
+<div class="col-xs3">{{ app.user.dateNaissance | date('d/m/y') }}</div>
+<div class="col-xs1">Nom du père :</div>
+<div class="col-xs3">{{ app.user.nomPere }}</div>
+<div class="col-xs1">Prénom du père :</div>
+<div class="col-xs3">{{ app.user.prenomPere }}</div>
+<div class="col-xs1">Nom de la mère :</div>
+<div class="col-xs3">{{ app.user.nomMere }}</div>
+<div class="col-xs1">Prénom de la mère :</div>
+<div class="col-xs3">{{ app.user.prenomMere }}</div>
+<div class="col-xs1">Emploi :</div>
+<div class="col-xs3">{{ app.user.emploi }}</div>
+<div class="col-xs1">Email :</div>
+
+<div class="col-xs3">{{ app.user.email }}</div>
+<div class="col-xs4">
+   
+    <a href="{{ path('users_agent')}}" class="btn blue">Modifier vos données !</a>
+<p>      </p>
+    
+</div>
+
+<div class="col-xs4">
+    <h1>Veuillez télécharger votre fiche ici !</h1>
+</div>
+<div>
+<a href="{{ path('users_data_download') }}" class="btn blue">Téléchargement</a>
+</div>
+
+</div>
+{% endblock %}
